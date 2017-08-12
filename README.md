@@ -35,3 +35,29 @@ to an email address that you own, but no more than that.
 ## Suggested improvements
 
 I'm going to implement some or all of the improvements suggested by Stephen in Lecture 195.
+
+## Replace Materialize with Bootstrap
+
+Change to use Bootstrap
+
+### Survey Cards
+
+* Colour the yes and no
+* Add something like a chart for yes and no.
+* Add the last responded date.
+
+### Allow for deleting surveys
+
+This is arguably pointless at the moment because all surveys have been sent
+out already. It becomes more important when it is possible to create a survey
+for later sending that you then decide not to send.
+
+### Allow the user to specify the from field
+
+### Allow the user to sort the surveys
+
+* Sort by number of votes, date sent, last responded date, and sent / unsent
+
+### Allow the user to save a survey for Later
+
+* Have options to save, save and send, edit and send / send again
