@@ -1,0 +1,30 @@
+.central {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.bigger {
+  font-size: 140%;
+}
+
+.spaced {
+  margin: 0 10px;
+}
+
+.survey-error {
+  margin-top: -15px;
+  margin-bottom: 20px;
+}
+
+.form-review {
+  margin-bottom: 20px;
+}
+
+.form-review-label {
+  width: 10em;
+}
+
+.small-info {
+  font-size: 85%;
+  color: #ccc;
+}
