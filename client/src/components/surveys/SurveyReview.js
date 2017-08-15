@@ -20,7 +20,7 @@ const SurveyReview = ({ onBack, values, submitSurvey, history }) => {
 
   return (
     <div>
-      <h5 className="center-align">Please confirm your entries</h5>
+      <h4 className="text-center mt-3">Please confirm your entries</h4>
 
       <table className="form-review bordered">
         <tbody>
@@ -29,13 +29,13 @@ const SurveyReview = ({ onBack, values, submitSurvey, history }) => {
       </table>
 
       <button
-        className="yellow darken-3 btn-flat white-text"
+        className="btn btn-warning"
         onClick={onBack}>
         Back
       </button>
 
       <button
-        className="green btn-flat right white-text"
+        className="float-right btn btn-primary"
         onClick={() => submitSurvey(values, history)}>
         Send Survey
         <i className="material-icons right">email</i>
