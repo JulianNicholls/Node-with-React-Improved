@@ -1,9 +1,5 @@
-.bigger {
-  font-size: 140%;
-}
-
-.spaced {
-  margin: 0 10px;
+nav {
+  background-color: #283593;
 }
 
 .survey-error {
@@ -17,9 +13,4 @@
 
 .form-review-label {
   width: 10em;
-}
-
-.small-info {
-  font-size: 85%;
-  color: #ccc;
 }

@@ -28,8 +28,8 @@ class Header extends Component {
 
   render() {
     return (
-      <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
-        <Link className="navbar-brand" to={this.logoDestination()}>
+      <nav className="navbar navbar-expand-sm navbar-dark">
+        <Link className="navbar-brand mr-auto" to={this.logoDestination()}>
           Emaily
         </Link>
         <ul className="navbar-nav">
