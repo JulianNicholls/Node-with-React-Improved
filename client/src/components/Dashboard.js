@@ -6,13 +6,13 @@ import SurveyList               from './surveys/SurveyList';
 const Dashboard = () => {
   return (
     <div>
-      <h5 className="center-align">Surveys Dashboard</h5>
+      <h4 className="text-center mt-3">Surveys Dashboard</h4>
 
       <SurveyList />
 
-      <div className="fixed-action-btn">
-        <Link to="/surveys/new" className="btn-floating indigo">
-          <i className="large material-icons">add</i>
+      <div className="float-right">
+        <Link to="/surveys/new" className="btn btn-large btn-primary">
+          <i className="">+</i>
         </Link>
       </div>
     </div>
