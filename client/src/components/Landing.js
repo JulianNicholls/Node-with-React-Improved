@@ -9,14 +9,18 @@ class Landing extends Component {
     }
 
     return (
-      <div className="central">
-        <h1 className="center-align">Emaily</h1>
-        <ol className="bigger">
-          <li>Create professional surveys</li>
-          <li>Collect feedback from your users</li>
-          <li>Profit!</li>
-        </ol>
-        <a href="/auth/google" className="center-align btn-large">Get Started</a>
+      <div className="jumbotron">
+        <div className="container">
+          <h1 className="display-4 text-center">Emaily<small> - professional surveys</small></h1>
+          <p className="lead my-4">Three steps to a better business</p>
+
+          <ol>
+            <li>Create professional surveys</li>
+            <li>Collect feedback from your users</li>
+            <li>Profit!</li>
+          </ol>
+          <a href="/auth/google" className="btn btn-lg btn-primary" role="button">Get Started</a>
+        </div>
       </div>
     )
   }

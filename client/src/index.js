@@ -4,7 +4,7 @@ import { Provider }                     from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import reduxThunk                       from 'redux-thunk';
 
-import 'materialize-css/dist/css/materialize.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/style.css';
 
 import reducers   from './reducers';

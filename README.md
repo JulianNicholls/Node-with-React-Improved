@@ -36,9 +36,13 @@ to an email address that you own, but no more than that.
 
 I'm going to implement some or all of the improvements suggested by Stephen in Lecture 195.
 
-## Replace Materialize with Bootstrap
+### Replace Materialize with Bootstrap
 
 Change to use Bootstrap
+
+### Allow the user to save a survey for later
+
+* Have options to save, save and send, edit and send / send again
 
 ### Survey Cards
 
@@ -57,7 +61,3 @@ for later sending that you then decide not to send.
 ### Allow the user to sort the surveys
 
 * Sort by number of votes, date sent, last responded date, and sent / unsent
-
-### Allow the user to save a survey for Later
-
-* Have options to save, save and send, edit and send / send again
