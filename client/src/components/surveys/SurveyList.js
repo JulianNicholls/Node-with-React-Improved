@@ -24,11 +24,11 @@ class SurveyList extends Component {
         <div key={survey._id} className="card my-3 bg-info text-white">
           <div className="card-header">{survey.title}</div>
           <div className="card-body">
-            <h4 className="card-title">{survey.subject}</h4>
+            <h5 className="card-title">{survey.subject}</h5>
             <p className="card-text">
               Question: {survey.body}<br/>
-            Yes <span className="badge badge-success mx-2">{survey.yes}</span>
-          No <span className="badge badge-danger ml-2">{survey.no}</span>
+              Yes <span className="badge badge-success mx-2">{survey.yes}</span>
+              No <span className="badge badge-danger ml-2">{survey.no}</span>
             </p>
           </div>
           <div className="card-footer">Sent {dateDisplay}</div>

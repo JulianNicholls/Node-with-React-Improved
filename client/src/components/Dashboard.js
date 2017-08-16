@@ -11,8 +11,8 @@ const Dashboard = () => {
       <SurveyList />
 
       <div className="float-right">
-        <Link to="/surveys/new" className="btn btn-large btn-primary">
-          <i className="">+</i>
+        <Link to="/surveys/new" className="btn btn-large">
+          <i className="fa fa-plus-circle fa-3x"></i>
         </Link>
       </div>
     </div>
