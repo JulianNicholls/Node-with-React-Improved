@@ -9,7 +9,7 @@ import * as actions     from '../../actions';
 import formFields       from './formFields';
 
 const SurveyReview = ({ onBack, values, submitSurvey, history }) => {
-  const reviewFields =  formFields.map(({name, label}) => {
+  const reviewFields = formFields.map(({name, label}) => {
     return (
       <tr key={name}>
         <th className="form-review-label">{label}</th>
@@ -22,7 +22,7 @@ const SurveyReview = ({ onBack, values, submitSurvey, history }) => {
     <div>
       <h4 className="text-center mt-3">Please confirm your entries</h4>
 
-      <table className="form-review bordered">
+      <table className="table table-sm form-review">
         <tbody>
           {reviewFields}
         </tbody>
@@ -37,8 +37,8 @@ const SurveyReview = ({ onBack, values, submitSurvey, history }) => {
       <button
         className="float-right btn btn-primary"
         onClick={() => submitSurvey(values, history)}>
-        Send Survey
-        <i className="material-icons right">email</i>
+        Send Survey&nbsp;
+        <i className="fa fa-send"></i>
       </button>
     </div>
   );
