@@ -1,7 +1,7 @@
-import React                    from 'react';
-import { Link }                 from 'react-router-dom';
+import React        from 'react';
+import { Link }     from 'react-router-dom';
 
-import SurveyList               from './surveys/SurveyList';
+import SurveyList   from './surveys/SurveyList';
 
 const Dashboard = () => {
   return (
@@ -10,11 +10,9 @@ const Dashboard = () => {
 
       <SurveyList />
 
-      <div className="float-right">
-        <Link to="/surveys/new" className="btn btn-large">
-          <i className="fa fa-plus-circle fa-3x"></i>
-        </Link>
-      </div>
+      <Link to="/surveys/new" className="float-right btn btn-large">
+        <i className="fa fa-plus-circle fa-3x"></i>
+      </Link>
     </div>
   )
 }

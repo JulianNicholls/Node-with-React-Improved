@@ -1,14 +1,9 @@
 body {
-  background: #E3F2FD; 
+  background: #E3F2FD;
 }
 
 nav {
   background-color: #283593;
-}
-
-.survey-error {
-  margin-top: -15px;
-  margin-bottom: 20px;
 }
 
 .form-review {
