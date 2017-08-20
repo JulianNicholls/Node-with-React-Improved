@@ -50,6 +50,52 @@ module.exports = app => {
     }
   });
 
+  app.post('/api/surveys/save', async (req, res) => {
+    const { title, subject, body, recipients } = req.body;
+    const emails = recipients
+      .split(/[;,]\s*/) // Split at , or ; with optional following space(s)
+      .map(email => email.trim());
+
+    const survey = new Survey({
+      title,
+      subject,
+      body,
+      recipients: emails.map(email => ({ email })),
+      _user:      req.user.id
+    });
+
+    try {
+      await survey.save();
+      res.send(user);
+    }
+    catch(err) {
+      res.status(422).send(err);
+    }
+  });
+
+  app.post('/api/surveys/send', async (req, res) => {
+    const survey = await Survey.findById(req.id)
+
+    survey.dateSent = Date.now();
+
+    const mailer = new Mailer(survey, surveyTemplate(survey));
+
+    try {
+      await mailer.send();
+
+      await survey.save();    // Or updateOne
+
+      --req.user.credits;
+      const user = await req.user.save();
+
+      res.send(user);
+    }
+    catch(err) {
+      res.status(422).send(err);
+    }
+
+  });
+
   // Example webhook call
   // {
   //   event: 'click',
@@ -65,7 +111,7 @@ module.exports = app => {
   //   timestamp: 1502287044,
 
   app.post('/api/surveys/webhooks', (req, res) => {
-    console.log('webhook');
+//    console.log('webhook');
 
     const p = new Path('/api/surveys/:surveyID/:choice');
 
