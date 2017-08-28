@@ -66,7 +66,7 @@ module.exports = app => {
 
     try {
       await survey.save();
-      res.send(user);
+      res.send(req.user);
     }
     catch(err) {
       res.status(422).send(err);
