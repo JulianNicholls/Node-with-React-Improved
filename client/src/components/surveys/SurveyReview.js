@@ -8,7 +8,7 @@ import * as actions     from '../../actions';
 
 import formFields       from './formFields';
 
-const SurveyReview = ({ onBack, values, submitSurvey, history }) => {
+const SurveyReview = ({ onBack, values, saveSurvey, submitSurvey, history }) => {
   const reviewFields = formFields.map(({name, label}) => {
     return (
       <tr key={name}>
@@ -39,6 +39,13 @@ const SurveyReview = ({ onBack, values, submitSurvey, history }) => {
         onClick={() => submitSurvey(values, history)}>
         Send Survey&nbsp;
         <i className="fa fa-send"></i>
+      </button>
+
+      <button
+        className="float-right btn btn-primary mr-2"
+        onClick={() => saveSurvey(values, history)}>
+        Save Survey&nbsp;
+        <i className="fa fa-save"></i>
       </button>
     </div>
   );
