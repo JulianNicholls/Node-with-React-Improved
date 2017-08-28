@@ -13,11 +13,21 @@ class SurveyList extends Component {
     const now = moment().unix();
 
     return this.props.surveys.reverse().map(survey => {
-      const stamp       = moment(survey.dateSent);
-      let   dateDisplay = stamp.format('[at] LT [on] Do MMM YYYY');
+      let dateDisplay = 'Unsent';
 
-      if(now - stamp.unix() < (15 * 86400)) {   // Last fortnight
-        dateDisplay = stamp.format('[at] LT, ') + stamp.fromNow();
+      if (survey.dateSent && survey.dateSent !== '') {
+        const stamp = moment(survey.dateSent);
+
+        dateDisplay = stamp.format('[Sent at] LT [on] Do MMM YYYY');
+
+        const secsAgo = now - stamp.unix();
+
+        if(secsAgo < 86400) {          // Last day
+          dateDisplay = `Sent ${stamp.fromNow()}`;
+        }
+        else if(secsAgo < (15 * 86400)) {   // Last fortnight
+          dateDisplay = stamp.format('[Sent at] LT, ') + stamp.fromNow();
+        }
       }
 
       return (
@@ -31,7 +41,7 @@ class SurveyList extends Component {
               No <span className="badge badge-danger ml-2">{survey.no}</span>
             </p>
           </div>
-          <div className="card-footer">Sent {dateDisplay}</div>
+          <div className="card-footer">{dateDisplay}</div>
         </div>
       );
     });
