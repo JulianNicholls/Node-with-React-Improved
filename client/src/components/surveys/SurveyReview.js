@@ -37,15 +37,15 @@ const SurveyReview = ({ onBack, values, saveSurvey, submitSurvey, history }) => 
       <button
         className="float-right btn btn-primary"
         onClick={() => submitSurvey(values, history)}>
-        Send Survey&nbsp;
         <i className="fa fa-send"></i>
+        &nbsp;Send Survey
       </button>
 
       <button
         className="float-right btn btn-primary mr-2"
         onClick={() => saveSurvey(values, history)}>
-        Save Survey&nbsp;
         <i className="fa fa-save"></i>
+        &nbsp;Save
       </button>
     </div>
   );

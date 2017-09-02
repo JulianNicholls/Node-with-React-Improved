@@ -1,4 +1,5 @@
 import React, { Component }     from 'react';
+import { Link }                 from 'react-router-dom';
 import { connect }              from 'react-redux';
 import moment                   from 'moment';
 
@@ -41,7 +42,15 @@ class SurveyList extends Component {
               No <span className="badge badge-danger ml-2">{survey.no}</span>
             </p>
           </div>
-          <div className="card-footer">{dateDisplay}</div>
+          <div className="card-footer">
+            {dateDisplay}
+            <Link
+              className="float-right btn btn-primary"
+              to='/surveys/edit'>
+                <i className="fa fa-edit"></i>
+                &nbsp;Edit
+            </Link>
+          </div>
         </div>
       );
     });
