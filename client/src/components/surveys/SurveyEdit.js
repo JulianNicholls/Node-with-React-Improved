@@ -15,7 +15,7 @@ class SurveyEdit extends Component {
       return <SurveyReview onBack={() => this.setState({ showReview: false })} />;
     }
 
-    return <SurveyForm onSurveySubmit={() => this.setState({ showReview: true })} />;
+    return <SurveyForm title="Edit Survey" onSurveySubmit={() => this.setState({ showReview: true })} />;
   }
 
   render() {
@@ -27,9 +27,9 @@ class SurveyEdit extends Component {
   }
 };
 
-function mapStateToProps(state) {
+function mapStateToProps({ surveys }) {
   return {
-    initialValues: state.survey.values
+    initialValues: surveys.current
   }
 }
 

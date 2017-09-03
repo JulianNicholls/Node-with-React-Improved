@@ -19,7 +19,7 @@ class SurveyForm extends Component {
   render() {
     return (
       <div>
-        <h4 className="text-center mt-3">New Survey</h4>
+        <h4 className="text-center my-3">{this.props.title}</h4>
 
         <form onSubmit={this.props.handleSubmit(this.props.onSurveySubmit)}>
           {this.renderFields()}
