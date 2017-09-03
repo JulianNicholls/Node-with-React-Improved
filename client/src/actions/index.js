@@ -1,6 +1,6 @@
 import axios            from 'axios';
 
-import { FETCH_USER, FETCH_SURVEYS }   from './types';
+import { FETCH_USER, FETCH_SURVEYS, SET_CURRENT_SURVEY }   from './types';
 
 // This line is equivalent to
 // export function fetchUser() {
@@ -40,3 +40,5 @@ export const fetchSurveys = () => async dispatch => {
 
   dispatch({ type: FETCH_SURVEYS, payload: res.data });
 }
+
+export const set_current_survey = data => ({ type: SET_CURRENT_SURVEY, payload: data })
