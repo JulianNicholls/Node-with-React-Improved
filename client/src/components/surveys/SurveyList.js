@@ -1,13 +1,20 @@
 import React, { Component }     from 'react';
-import { Link }                 from 'react-router-dom';
 import { connect }              from 'react-redux';
+import { withRouter }           from 'react-router-dom';
 import moment                   from 'moment';
 
-import { fetchSurveys }         from '../../actions';
+import { fetchSurveys, setCurrentSurvey }   from '../../actions';
 
 class SurveyList extends Component {
   componentDidMount() {
     this.props.fetchSurveys();
+  }
+
+  loadForEdit(data) {
+    this.props.setCurrentSurvey(data);
+
+    // Redirect here
+    this.props.history.push('/surveys/edit');
   }
 
   renderSurveys() {
@@ -44,12 +51,10 @@ class SurveyList extends Component {
           </div>
           <div className="card-footer">
             {dateDisplay}
-            <Link
-              className="float-right btn btn-primary"
-              to='/surveys/edit'>
-                <i className="fa fa-edit"></i>
-                &nbsp;Edit
-            </Link>
+            <button className="float-right btn btn-primary" onClick={() => this.loadForEdit(survey)}>
+              <i className="fa fa-edit"></i>
+              &nbsp;Edit
+            </button>
           </div>
         </div>
       );
@@ -69,4 +74,4 @@ function mapStateToProps({ surveys }) {
   return { surveys: surveys.list };
 }
 
-export default connect(mapStateToProps, { fetchSurveys })(SurveyList);
+export default connect(mapStateToProps, { fetchSurveys, setCurrentSurvey })(withRouter(SurveyList));
