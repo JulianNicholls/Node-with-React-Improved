@@ -41,4 +41,4 @@ export const fetchSurveys = () => async dispatch => {
   dispatch({ type: FETCH_SURVEYS, payload: res.data });
 }
 
-export const set_current_survey = data => ({ type: SET_CURRENT_SURVEY, payload: data })
+export const setCurrentSurvey = data => ({ type: SET_CURRENT_SURVEY, payload: data })
