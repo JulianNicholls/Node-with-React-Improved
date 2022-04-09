@@ -20,7 +20,7 @@
     "axios": "^0.21.1",
     "bootstrap": "^4.0.0-beta",
     "materialize-css": "^0.100.1",
-    "moment": "^2.18.1",
+    "moment": "^2.29.2",
     "react": "^15.6.1",
     "react-bootstrap": "^0.31.2",
     "react-dom": "^15.6.1",
